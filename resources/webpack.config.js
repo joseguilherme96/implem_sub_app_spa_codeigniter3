@@ -10,12 +10,16 @@ module.exports = {
         path: path.resolve(__dirname, 'build')
     },
     devServer: {
-
         static: {
             directory: './build'
         },
-        port: 9000
-
+        port: 9000,
+        historyApiFallback: true
+    },
+    resolve: {
+        alias: {
+            vue: 'vue/dist/vue.esm-browser.js'
+        }
     },
 
 
