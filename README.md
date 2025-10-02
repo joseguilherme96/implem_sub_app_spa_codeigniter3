@@ -53,3 +53,61 @@ A adoção de um sub-app SPA dentro do sistema trouxe diversos ganhos técnicos 
 📥 Facilidade de instalação de pacotes – utilização do npm/yarn para instalar, atualizar e gerenciar dependências do frontend.
 
 🔗 Desacoplamento – arquitetura que facilita a migração futura para frameworks mais modernos (CodeIgniter 4 ou Laravel), já que o frontend funciona de forma independente do backend.
+
+# Instalação para execução do SPA(Single Page Application) fora ou dentro do Framework Codeigniter
+
+## Instalação
+
+Abra a pasta resources. E instale as dependências
+
+```sh
+
+npm install
+
+```
+
+## Execução do sup-app fora do codeigniter
+
+Dentro da pasta resources. Execute o seguinte comando :
+
+```sh
+
+    npm start
+
+```
+
+Um servidor webpack será iniciado, normalmente no endereço http://localhost:9000
+
+## Execução do sup-app dentro do codeigniter
+
+### Requisitos
+
+- PHP 7.4.33 
+- Servidor Xammp ou de sua preferência
+
+### Alteração da base_url no arquivo config/config.php
+
+Altere a base url que o projeto codeigniter será executado de acordo com seu ambiente.
+
+```sh
+
+$config['base_url'] = 'http://localhost:8092/implem_sub_app_spa_codeigniter3';
+
+```
+
+### Execução do sub-app
+
+Dentro da pasta resources. Execute o seguinte comando :
+
+```sh
+
+    npm run build:dev
+
+
+```
+
+Automaticamente um build será gerado, para que o codeingiter possa ler este build e executar o sub-app dentro do codeigniter.
+
+### Inicie o servidor Xammp ou de sua preferência
+
+Abra o codeigniter na url base configurada. Neste caso este projeto está configurado para este endereço http://localhost:8092/implem_sub_app_spa_codeigniter3
