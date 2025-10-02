@@ -1,0 +1,22 @@
+{
+  "name": "resources",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "cross-env NODE_ENV=production webpack",
+    "build:dev": "cross-env NODE_ENV=development webpack"
+  },
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "cross-env": "^10.1.0",
+    "dotenv-webpack": "^8.1.1",
+    "webpack": "^5.102.0",
+    "webpack-dev-server": "^5.2.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^6.0.1"
+  }
+}
