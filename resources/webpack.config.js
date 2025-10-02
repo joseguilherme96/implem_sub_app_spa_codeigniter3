@@ -1,5 +1,6 @@
 const modoDev = process.env.NODE_ENV !== 'production'
 const path = require('path');
+const { VuetifyPlugin } = require('webpack-plugin-vuetify');
 
 module.exports = {
 
@@ -21,6 +22,20 @@ module.exports = {
             vue: 'vue/dist/vue.esm-browser.js'
         }
     },
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: [
+                    'vue-style-loader',
+                    'css-loader'
+                ]
+            }
+        ]
+    },
+    plugins: [
+        new VuetifyPlugin({ autoImport: true })
+    ]
 
 
 }
