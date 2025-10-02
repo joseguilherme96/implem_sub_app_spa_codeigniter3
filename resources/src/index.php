@@ -1,1 +1,1 @@
-<script type="module" src="./main.js"></script>
+<script type="module" src="<?= base_url() ?>resources/build/main.js"></script>
