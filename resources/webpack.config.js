@@ -1,6 +1,8 @@
 const modoDev = process.env.NODE_ENV !== 'production'
 const path = require('path');
 const { VuetifyPlugin } = require('webpack-plugin-vuetify');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
 
@@ -25,16 +27,22 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/,
+                test: /\.s?css$/,
                 use: [
-                    'vue-style-loader',
+                    modoDev ? 'vue-style-loader' : MiniCssExtractPlugin.loader,
                     'css-loader'
                 ]
             }
-        ]
+        ],
+    },
+    optimization: {
+        minimizer: modoDev ? [] : [
+            new CssMinimizerPlugin(),
+        ],
     },
     plugins: [
-        new VuetifyPlugin({ autoImport: true })
+        new VuetifyPlugin({ autoImport: true }),
+        new MiniCssExtractPlugin()
     ]
 
 
