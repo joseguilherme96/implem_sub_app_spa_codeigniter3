@@ -51,7 +51,7 @@ export const Relatorio = {
 
     template: `
         <v-container class="mt-0 pt-0">
-            <h1 style="font-weight:100; margin-top: 0; margin-bottom: 16px;">Relatório</h1>
+            <h1 style="font-weight:100; color:gray; margin-top: 0; margin-bottom: 16px;">Relatório</h1>
             <v-card>
                 <v-card-title class="pb-5">
                     <v-row>

@@ -1,6 +1,6 @@
 <template>
     <v-container class="mt-0 pt-0">
-        <h1 style="font-weight:100; color:#B8860B; margin-top: 0; margin-bottom: 16px;">Cadastro de Orçamento</h1>
+        <h1 style="font-weight:100; color:gray; margin-top: 0; margin-bottom: 16px;">Cadastro de Orçamento</h1>
 
         <v-card>
             <v-card-title class="pb-5">
@@ -24,7 +24,7 @@
                 </v-row>
 
                 <v-row class="justify-end">
-                    <v-btn color="#B8860B" @click="salvarOrcamento">
+                    <v-btn color="#CDC9C9" @click="salvarOrcamento">
                         Salvar Orçamento
                     </v-btn>
                 </v-row>
