@@ -3,6 +3,7 @@ const path = require('path');
 const { VuetifyPlugin } = require('webpack-plugin-vuetify');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { VueLoaderPlugin } = require('vue-loader')
 
 module.exports = {
 
@@ -32,6 +33,10 @@ module.exports = {
                     modoDev ? 'vue-style-loader' : MiniCssExtractPlugin.loader,
                     'css-loader'
                 ]
+            },
+            {
+                test: /\.vue$/,
+                loader: 'vue-loader'
             }
         ],
     },
@@ -42,7 +47,8 @@ module.exports = {
     },
     plugins: [
         new VuetifyPlugin({ autoImport: true }),
-        new MiniCssExtractPlugin()
+        new MiniCssExtractPlugin(),
+        new VueLoaderPlugin(),
     ]
 
 
