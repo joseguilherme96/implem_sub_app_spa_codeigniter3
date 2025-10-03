@@ -1,6 +1,5 @@
 import { VDataTable, VContainer, VTextField, VCard, VCardTitle, VRow, VCol, VSelect, VBtn } from 'vuetify/components'
 
-
 export const Relatorio = {
 
     components: {
