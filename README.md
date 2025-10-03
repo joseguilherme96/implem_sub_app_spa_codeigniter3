@@ -1,8 +1,10 @@
 # Implementação de um sub-app SPA com Webpack + Vue.js + Vuetify/Bootstrap dentro do Codeingiter 3
 
-Este projeto surgiu da necessidade que encontrei quando trabalhava com CodeIgniter em uma empresa anterior.
+Este projeto surgiu da necessidade de melhorar sistemas já existentes em CodeIgniter 3.
 
-Na implementação tradicional, as páginas eram renderizadas diretamente pelo CodeIgniter: ao chamar uma função do controller, era carregada uma view. Esse modelo funcionava, mas não proporcionava a experiência de uma SPA (Single Page Application), onde toda a aplicação roda a partir de um único ponto de entrada.
+A ideia é não modificar a estrutura atual do sistema (que muitas vezes já está em estágio avançado de desenvolvimento), mas permitir que, à medida que novos módulos forem criados, pode-se se aproveitar os benefícios de um SPA (Single Page Application), agregando recursos modernos sem afetar as partes legadas/ já desenvolvidas.
+
+Na implementação tradicional, as páginas eram renderizadas diretamente pelo CodeIgniter: ao chamar uma função do controller, era carregada uma view. Esse modelo funcionava, mas não proporcionava a experiência de uma SPA (Single Page Application), onde toda a aplicação roda a partir de um único p ionto de entrada.
 
 # Problema Identificado
 
@@ -53,6 +55,8 @@ A adoção de um sub-app SPA dentro do sistema trouxe diversos ganhos técnicos 
 📥 Facilidade de instalação de pacotes – utilização do npm/yarn para instalar, atualizar e gerenciar dependências do frontend.
 
 🔗 Desacoplamento – arquitetura que facilita a migração futura para frameworks mais modernos (CodeIgniter 4 ou Laravel), já que o frontend funciona de forma independente do backend.
+
+🟩 Carregamento de páginas - Permite carregamento de páginas componentizadas com ou ainda sem componentização com a extensão .vue, .js e .html
 
 # Instalação para execução do SPA(Single Page Application) fora ou dentro do Framework Codeigniter
 
@@ -111,3 +115,18 @@ Automaticamente um build será gerado, para que o codeingiter possa ler este bui
 ### Inicie o servidor Xammp ou de sua preferência
 
 Abra o codeigniter na url base configurada. Neste caso este projeto está configurado para este endereço http://localhost:8092/implem_sub_app_spa_codeigniter3
+
+# Imagem do sub-app rodando fora do codeigniter
+
+[![Sub-App sendo executado fora do codeigniter](assets/sub_app_sendo_executado_fora_do_codigniter.png "Sub-App sendo executado fora do codeigniter")](assets/sub_app_sendo_executado_fora_do_codigniter.png)
+
+# Imagem do sub-app sendo executado dentro do codeigniter
+
+[![Sub-App sendo executado dentro do codeigniter](assets/sub_app_sendo_executado_dentro_do_codigniter.png "Sub-App sendo executado dentro do codeigniter")](assets/sub_app_sendo_executado_dentro_do_codigniter.png)
+
+# Imagem de view feita com bootstrap sendo executada dentro do codeigniter, mas fora do sub-app(SPA)
+
+[![View sendo executado dentro do codeigniter fora do sub-app](assets/sub_app_sendo_executado_dentro_do_codigniter_fora_do_sub_app.png "View sendo executado dentro do codeigniter fora do sub-app")](assets/sub_app_sendo_executado_dentro_do_codigniter_fora_do_sub_app.png)
+
+
+
