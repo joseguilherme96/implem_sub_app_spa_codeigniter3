@@ -1,10 +1,10 @@
-# Implementação de um sub-app SPA com Webpack + Vue.js + Vuetify/Bootstrap dentro do Codeingiter 3
+# Implementação de um sub-app SPA com Webpack + Vue.js + Vuetify/Bootstrap dentro do Codeigniter 3
 
 Este projeto surgiu da necessidade de melhorar sistemas já existentes em CodeIgniter 3.
 
 A ideia é não modificar a estrutura atual do sistema (que muitas vezes já está em estágio avançado de desenvolvimento), mas permitir que, à medida que novos módulos forem criados, pode-se se aproveitar os benefícios de um SPA (Single Page Application), agregando recursos modernos sem afetar as partes legadas/ já desenvolvidas.
 
-Na implementação tradicional, as páginas eram renderizadas diretamente pelo CodeIgniter: ao chamar uma função do controller, era carregada uma view. Esse modelo funcionava, mas não proporcionava a experiência de uma SPA (Single Page Application), onde toda a aplicação roda a partir de um único p ionto de entrada.
+Na implementação tradicional, as páginas eram renderizadas diretamente pelo CodeIgniter: ao chamar uma função do controller, era carregada uma view. Esse modelo funcionava, mas não proporcionava a experiência de uma SPA (Single Page Application), onde toda a aplicação roda a partir de um único ponto de entrada.
 
 # Problema Identificado
 
